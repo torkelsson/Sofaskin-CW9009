@@ -179,23 +179,23 @@
                 <td></td>
               </tr>
               <tr>
-                <td>High Inside Temperature</td>
+                <td>High $Extras.inTempLabel Temperature</td>
                 <td>$week.inTemp.max</td>
                 <td>$week.inTemp.maxtime</td>
               </tr>
               <tr>
-                <td>Low Inside Temperature</td>
+                <td>Low $Extras.inTempLabel Temperature</td>
                 <td>$week.inTemp.min</td>
                 <td>$week.inTemp.mintime</td>
               </tr>
               #if $week.extraTemp1.has_data
               <tr>
-                <td>High Pond Temp</td>
+                <td>High $Extras.extraTemp1Label Temp</td>
                 <td>$week.extraTemp1.max</td>
                 <td>$week.extraTemp1.maxtime</td>
               </tr>
               <tr>
-                <td>Low Pond Temp</td>
+                <td>Low $Extras.extraTemp1Label Temp</td>
                 <td>$week.extraTemp1.min</td>
                 <td>$week.extraTemp1.mintime</td>
               </tr>
@@ -321,23 +321,23 @@
                 <td></td>
               </tr>
               <tr>
-                <td>High Inside Temperature</td>
+                <td>High $Extras.inTempLabel Temperature</td>
                 <td>$yesterday.inTemp.max</td>
                 <td>$yesterday.inTemp.maxtime</td>
               </tr>
               <tr>
-                <td>Low Inside Temperature</td>
+                <td>Low $Extras.inTempLabel Temperature</td>
                 <td>$yesterday.inTemp.min</td>
                 <td>$yesterday.inTemp.mintime</td>
               </tr>
               #if $yesterday.extraTemp1.has_data
               <tr>
-                <td>High Pond Temp</td>
+                <td>High $Extras.extraTemp1Label Temp</td>
                 <td>$yesterday.extraTemp1.max</td>
                 <td>$yesterday.extraTemp1.maxtime</td>
               </tr>
               <tr>
-                <td>Low Pond Temp</td>
+                <td>Low $Extras.extraTemp1Label Temp</td>
                 <td>$yesterday.extraTemp1.min</td>
                 <td>$yesterday.extraTemp1.mintime</td>
               </tr>
@@ -469,23 +469,23 @@
                 <td></td>
               </tr>
               <tr>
-                <td>High Inside Temperature</td>
+                <td>High $Extras.inTempLabel Temperature</td>
                 <td>$month.inTemp.max</td>
                 <td>$month.inTemp.maxtime</td>
               </tr>
               <tr>
-                <td>Low Inside Temperature</td>
+                <td>Low $Extras.inTempLabel Temperature</td>
                 <td>$month.inTemp.min</td>
                 <td>$month.inTemp.mintime</td>
               </tr>
               #if $month.extraTemp1.has_data
               <tr>
-                <td>High Pond Temp</td>
+                <td>High $Extras.extraTemp1Label Temp</td>
                 <td>$month.extraTemp1.max</td>
                 <td>$month.extraTemp1.maxtime</td>
               </tr>
               <tr>
-                <td>Low Pond Temp</td>
+                <td>Low $Extras.extraTemp1Label Temp</td>
                 <td>$month.extraTemp1.min</td>
                 <td>$month.extraTemp1.mintime</td>
               </tr>
@@ -539,8 +539,8 @@
             <img src="weekwindvec.png" alt="Wind Vector" />
             <img src="weektempchill.png" alt="heatchill" />
             <img src="weekbarometer.png" alt="barometer"/>
-            <img src="weekinside.png" alt="Inside" />
-            <img src="weekinhumid.png" alt="Inside/Outside Humidity" />
+            <img src="weekinside.png" alt="$Extras.inTempLabel" />
+            <img src="weekinhumid.png" alt="$Extras.inHumidityLabel/Outside Humidity" />
             #if $week.UV.has_data
             <img src="weekuv.png" alt="UV index" />
             #end if
@@ -551,7 +551,7 @@
             <img src="weekrx.png" alt="week rx percent"/>
             #end if
             #if $week.extraTemp1.has_data
-            <img src="weekpond.png" alt="Pond Temperatures" />
+            <img src="weekextratemp1.png" alt="$Extras.extraTemp1Label Temperatures" />
             #end if
           </div>
         </div>

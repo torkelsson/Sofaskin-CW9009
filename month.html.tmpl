@@ -179,23 +179,23 @@
                 <td></td>
               </tr>
               <tr>
-                <td>High Inside Temperature</td>
+                <td>High $Extras.inTempLabel Temperature</td>
                 <td>$month.inTemp.max</td>
                 <td>$month.inTemp.maxtime</td>
               </tr>
               <tr>
-                <td>Low Inside Temperature</td>
+                <td>Low $Extras.inTempLabel Temperature</td>
                 <td>$month.inTemp.min</td>
                 <td>$month.inTemp.mintime</td>
               </tr>
               #if $month.extraTemp1.has_data
               <tr>
-                <td>High Pond Temp</td>
+                <td>High $Extras.extraTemp1Label Temp</td>
                 <td>$month.extraTemp1.max</td>
                 <td>$month.extraTemp1.maxtime</td>
               </tr>
               <tr>
-                <td>Low Pond Temp</td>
+                <td>Low $Extras.extraTemp1Label Temp</td>
                 <td>$month.extraTemp1.min</td>
                 <td>$month.extraTemp1.mintime</td>
               </tr>
@@ -327,23 +327,23 @@
                 <td></td>
               </tr>
               <tr>
-                <td>High Inside Temperature</td>
+                <td>High $Extras.inTempLabel Temperature</td>
                 <td>$month($months_ago=12).inTemp.max</td>
                 <td>$month($months_ago=12).inTemp.maxtime</td>
               </tr>
               <tr>
-                <td>Low Inside Temperature</td>
+                <td>Low $Extras.inTempLabel Temperature</td>
                 <td>$month($months_ago=12).inTemp.min</td>
                 <td>$month($months_ago=12).inTemp.mintime</td>
               </tr>
               #if $month($months_ago=12).extraTemp1.has_data
               <tr>
-                <td>High Pond Temp</td>
+                <td>High $Extras.extraTemp1Label Temp</td>
                 <td>$month($months_ago=12).extraTemp1.max</td>
                 <td>$month($months_ago=12).extraTemp1.maxtime</td>
               </tr>
               <tr>
-                <td>Low Pond Temp</td>
+                <td>Low $Extras.extraTemp1Label Temp</td>
                 <td>$month($months_ago=12).extraTemp1.min</td>
                 <td>$month($months_ago=12).extraTemp1.mintime</td>
               </tr>
@@ -397,8 +397,8 @@
             <img src="monthwindvec.png" alt="Wind Vector" />
             <img src="monthtempchill.png" alt="heatchill" />
             <img src="monthbarometer.png" alt="barometer"/>
-            <img src="monthinside.png" alt="Inside" />
-            <img src="monthinhumid.png" alt="Inside/Outside Humidity" />
+            <img src="monthinside.png" alt="$Extras.inTempLabel" />
+            <img src="monthinhumid.png" alt="$Extras.inHumidityLabel/Outside Humidity" />
             #if $month.UV.has_data
             <img src="monthuv.png" alt="UV Index" />
             #end if
@@ -409,7 +409,7 @@
             <img src="monthrx.png" alt="month rx percent"/>
             #end if
             #if $month.extraTemp1.has_data
-            <img src="monthpond.png" alt="Pond Temperatures" />
+            <img src="monthextratemp1.png" alt="$Extras.extraTemp1Label Temperatures" />
             #end if
           </div>
         </div>
