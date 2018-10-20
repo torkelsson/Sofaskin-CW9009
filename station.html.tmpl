@@ -93,6 +93,31 @@
         <div class="left" >
           <div class="card" >
             <h1><i class="fa fa-info-circle" ></i> Station Information</h1>
+            <table>
+              <tr>
+                <td><b>Station:</b></td>
+                <td>$station.hardware</td>
+              </tr>
+              <tr>
+                <td><b>Software:</b></td>
+                <td><a href="http://weewx.com/" target="_blank" >WeeWX v$station.version</a></td>
+              </tr>
+              <tr>
+	      <td colspan="2"> </td>
+	      </tr>
+              <tr>
+                <td><b>Latitude:</b></td>
+                <td>$station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2]</td>
+              </tr>
+              <tr>
+                <td><b>Longitude:</b></td>
+                <td>$station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2]</td>
+              </tr>
+              <tr>
+                <td><b>Elevation:</b></td>
+                <td>$station.altitude</td>
+              </tr>
+            </table>
           </div>
           <div class="card" >
             <h1><i class="fa fa-server m-rot"></i> Status</h1>
@@ -105,6 +130,69 @@
                 <td><b>Server uptime:</b></td>
                 <td>$station.os_uptime</td>
               </tr>
+              #if $Extras.has_key('battery_status')
+              <tr>
+                <td colspan="2"> </td>
+	      </tr>
+              <tr>
+                <td colspan="2"><b>Battery Status:</b></td>
+	      </tr>
+              <tr>
+                <td>&nbsp;Temperature:</td>
+                <td>
+                  #if $day.outTemp.has_data
+                    #if $current.outTempBatteryStatus.raw
+                      <i class="fa fa-battery-empty m-rot" ></i> Low
+                    #else
+                      <i class="fa fa-battery-full m-rot" ></i> OK
+                    #end if
+                  #else
+                    Missing
+                  #end if
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;Rain:</td>
+                <td>
+                  #if $day.rain.has_data
+                    #if $current.rainBatteryStatus.raw
+                      <i class="fa fa-battery-empty m-rot" ></i> Low
+                    #else
+                      <i class="fa fa-battery-full m-rot" ></i> OK
+                    #end if
+                  #else
+                    Missing
+                  #end if
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;Wind:</td>
+                <td>
+                  #if $day.wind.has_data
+                    #if $current.windBatteryStatus.raw
+                      <i class="fa fa-battery-empty m-rot" ></i> Low
+                    #else
+                      <i class="fa fa-battery-full m-rot" ></i> OK
+                    #end if
+                  #else
+                    Missing
+                  #end if
+                </td>
+              </tr>
+              #if $day.UV.has_data
+              <tr>
+                <td>&nbsp;UV:</td>
+                <td>
+                  #if $day.UV.has_data
+                    <i class="fa fa-battery-full m-rot" ></i> OK
+                  #else
+                    Missing
+                  #end if
+                </td>
+              </tr>
+              #end if
+	      #end if
+
             </table>
           </div>
         </div>
